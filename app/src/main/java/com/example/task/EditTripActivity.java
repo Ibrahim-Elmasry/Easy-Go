@@ -35,7 +35,6 @@ public class EditTripActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         mDb = FirebaseFirestore.getInstance();
 
-
         TripModel model = this.getIntent().getParcelableExtra("mModel");
         tripId = this.getIntent().getStringExtra("idz");
 
