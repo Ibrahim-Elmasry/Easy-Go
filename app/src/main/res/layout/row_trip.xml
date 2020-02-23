@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/pyrm"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_gravity="center"
+        >
+        <TextView
+            android:id="@+id/row_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/row_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="150 L.E"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
