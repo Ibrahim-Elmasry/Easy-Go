@@ -2,4 +2,4 @@
 
 Prject APK
 
-apk/task V2.0.apk
+https://github.com/Ibrahim-Elmasry/Task/raw/master/apk/task%20V2.0.apk
