@@ -4,12 +4,12 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class TripModel implements Parcelable {
-    private String trip_title , trip_number, price, destination, departure_time, return_time, description ;
+    private String trip_title , trip_number, price, destination, departure_time, return_time, description ,company;
 
     public TripModel() {
     }
 
-    public TripModel(String trip_title, String trip_number, String price, String destination, String departure_time, String return_time, String description) {
+    public TripModel(String trip_title, String trip_number, String price, String destination, String departure_time, String return_time, String description, String company) {
         this.trip_title = trip_title;
         this.trip_number = trip_number;
         this.price = price;
@@ -17,6 +17,7 @@ public class TripModel implements Parcelable {
         this.departure_time = departure_time;
         this.return_time = return_time;
         this.description = description;
+        this.company = company;
     }
 
     protected TripModel(Parcel in) {
@@ -27,6 +28,7 @@ public class TripModel implements Parcelable {
         departure_time = in.readString();
         return_time = in.readString();
         description = in.readString();
+        company = in.readString();
     }
 
     @Override
@@ -38,6 +40,7 @@ public class TripModel implements Parcelable {
         dest.writeString(departure_time);
         dest.writeString(return_time);
         dest.writeString(description);
+        dest.writeString(company);
     }
 
     @Override
@@ -111,5 +114,13 @@ public class TripModel implements Parcelable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
     }
 }

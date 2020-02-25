@@ -6,64 +6,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <LinearLayout
-        android:visibility="gone"
-        android:id="@+id/uslessLinear"
+    <FrameLayout
+        android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginTop="10dp"
-        >
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Btn 1"
-            android:backgroundTint="@color/colorPrimaryDark"
-            android:textColor="@color/white"
-            />
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Btn 2"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColor="@color/white"
-            />
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Btn 1"
-            android:backgroundTint="@color/colorAccent"
-            android:textColor="@color/white"
-            />
+        android:layout_height="wrap_content">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary" />
 
-    </LinearLayout>
+        <com.miguelcatalan.materialsearchview.MaterialSearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
 
-    <TextView
-        android:visibility="gone"
-        android:id="@+id/uslessTV"
-        android:layout_below="@id/uslessLinear"
-        android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="@color/black"
-        />
 
     <android.support.v7.widget.RecyclerView
-        android:layout_below="@+id/uslessTV"
+        android:layout_below="@+id/toolbar_container"
         android:id="@+id/recycler_Trip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

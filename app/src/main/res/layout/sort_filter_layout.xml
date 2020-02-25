@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:textColor="@color/black"
+
+        android:textSize="25sp" />
+
+    <RadioGroup
+        android:id="@+id/rgCompany"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Company : "
+            android:textSize="18sp"
+            />
+        <RadioButton
+            android:id="@+id/radio_c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+        <RadioButton
+            android:id="@+id/radio_c2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C2"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+        <RadioButton
+            android:id="@+id/radio_c3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C3"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+    </RadioGroup>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by"
+        android:textColor="@color/black"
+
+        android:textSize="25sp" />
+
+    <RadioGroup
+        android:id="@+id/rgPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price : "
+            android:textSize="18sp"
+            />
+        <RadioButton
+            android:id="@+id/radio_LTHPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low To High"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+        <RadioButton
+            android:id="@+id/radio_HTLPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High To Low"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/rgOrder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order by : "
+            android:textSize="18sp"
+            />
+        <RadioButton
+            android:id="@+id/radio_a2z"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A - Z"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+        <RadioButton
+            android:id="@+id/radio_z2a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z - A"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            />
+
+    </RadioGroup>
+
+<Button
+    android:id="@+id/savFilter"
+    android:layout_marginTop="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Save"
+    android:backgroundTint="@android:color/darker_gray"
+    android:textColor="@color/white"
+    android:layout_gravity="end"
+    />
+
+
+
+</LinearLayout>

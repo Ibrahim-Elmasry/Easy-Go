@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,7 +21,8 @@ import java.util.Objects;
 public class AddTripActivity extends AppCompatActivity {
 
     private EditText edTitle,edNum,edPrice, edDest, edDepart, edReturn, edDescription;
-    private String stTitle,stNum,stPrice, stDest, stDepart, stReturn, stDescription;
+    private String stTitle,stNum,stPrice, stDest, stDepart, stReturn, stDescription,stCompany;
+    private RadioGroup rgCompany;
     private Button addBtn;
     private FirebaseFirestore mDb;
 
@@ -41,6 +43,28 @@ public class AddTripActivity extends AppCompatActivity {
         edReturn = findViewById(R.id.Add_trip_return);
         edDescription = findViewById(R.id.Add_trip_Descrip);
         addBtn = findViewById(R.id.Add_trip_addBtn);
+        rgCompany = findViewById(R.id.Add_trip_rgCompany);
+        rgCompany.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // find which radio button is selected
+                switch (checkedId) {
+                    case R.id.Add_trip_radio_c1:
+                        stCompany = "c1";
+                        break;
+                    case R.id.Add_trip_radio_c2:
+                        stCompany = "c2";
+                        break;
+                    case R.id.Add_trip_radio_c3:
+                        stCompany = "c3";
+                        break;
+                }
+            }
+
+        });
+
+
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +85,7 @@ public class AddTripActivity extends AppCompatActivity {
         stDescription = edDescription.getText().toString();
 
         if (stTitle.equals("") || stTitle.length() == 0
+                ||stCompany.equals("") || stCompany.length() == 0
                 ||stNum.equals("") || stNum.length() == 0
                 || stPrice.equals("") || stPrice.length() == 0
                 || stDest.equals("") || stDest.length() == 0
@@ -69,7 +94,7 @@ public class AddTripActivity extends AppCompatActivity {
                 || stDescription.equals("") || stDescription.length() == 0){
 
         }else {
-            postData(stTitle,stNum, stPrice, stDest, stDepart, stReturn, stDescription);
+            postData(stTitle.toLowerCase(),stNum, stPrice, stDest.toLowerCase(), stDepart, stReturn, stDescription,stCompany);
         }
 
 
@@ -96,18 +121,23 @@ public class AddTripActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void postData(String trip_title,String trip_number, String price, String destination, String departure_time, String return_time, String description){
+    private void postData(String trip_title,String trip_number, String price, String destination, String departure_time, String return_time, String description, String company){
         final DocumentReference tripRef = mDb
                 .collection("trips")
                 .document();
 
-        TripModel newTrip = new TripModel(trip_title,trip_number, price, destination, departure_time, return_time, description);
+        TripModel newTrip = new TripModel(trip_title,trip_number, price, destination, departure_time, return_time, description,company);
         tripRef.set(newTrip).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
 
                     Toast.makeText(AddTripActivity.this, "Success", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(AddTripActivity.this,MainActivity.class);
+                    startActivity(i);
+                    finish();
+
                 } else {
 
 

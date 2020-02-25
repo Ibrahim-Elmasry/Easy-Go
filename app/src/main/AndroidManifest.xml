@@ -11,13 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TripDetailsActivity"></activity>
+        <activity android:name=".AddTripActivity" />
+        <activity android:name=".EditTripActivity" />
         <activity
-            android:name=".AddTripActivity">
-        </activity>
-        <activity
-            android:name=".EditTripActivity">
-        </activity>
-        <activity android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

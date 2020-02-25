@@ -1,192 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-
-    >
-
+    android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    tools:context=".TripDetailsActivity"
     android:orientation="vertical"
     >
-
-    <EditText
-        android:id="@+id/Add_trip_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Start From"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-    <EditText
-        android:id="@+id/Add_trip_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Trip Number"
-        android:inputType="number"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/Add_trip_price"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Trip Price"
-        android:inputType="number"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/Add_trip_rgCompany"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Company : "
-            android:textSize="18sp"
-            />
-        <RadioButton
-            android:id="@+id/Add_trip_radio_c1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="C1"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            />
-        <RadioButton
-            android:id="@+id/Add_trip_radio_c2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="C2"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            />
-        <RadioButton
-            android:id="@+id/Add_trip_radio_c3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="C3"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            />
-    </RadioGroup>
-
-    <EditText
-        android:id="@+id/Add_trip_Destin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Destination"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/Add_trip_departure"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Departure Time"
-        android:inputType="datetime"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/Add_trip_return"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical"
-        android:hint="Return Time"
-        android:inputType="datetime"
-        android:padding="10dp"
-        android:singleLine="true"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/Add_trip_Descrip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@android:color/transparent"
-        android:gravity="center_vertical"
-        android:hint="Description"
-        android:padding="10dp"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
-
-    <Button
-        android:id="@+id/Add_trip_addBtn"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/pyrm"
         android:layout_gravity="center"
-        android:backgroundTint="@color/colorAccent"
-        android:text="ADD"
-        android:textColor="@color/white"
-        android:paddingStart="25dp"
-        android:paddingEnd="25dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginBottom="10dp"
-
         />
+    <TextView
+        android:id="@+id/details_trip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Start From"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/details_trip_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Trip Number"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_trip_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Trip Price"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_trip_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Trip Price"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/details_trip_Destin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Destination"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_trip_departure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:drawablePadding="8dp"
+        android:text="Departure Time"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_trip_return"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:text="Return Time"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/details_trip_Descrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:text="Description"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
 
 </LinearLayout>
+
 </ScrollView>
