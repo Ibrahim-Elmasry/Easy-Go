@@ -36,8 +36,8 @@ public class TripDetailsActivity extends AppCompatActivity {
         tvNum.setText("Number : "+model.getTrip_number());
         tvPrice.setText("Price :  "+model.getPrice());
         tvDest.setText("Destination : "+model.getDestination());
-        tvDepart.setText("Departure : "+model.getDeparture_time());
-        tvReturn.setText("Return : "+model.getReturn_time());
+        tvDepart.setText("Start At : "+model.getDeparture_time());
+        tvReturn.setText("End At : "+model.getReturn_time());
         tvDescription.setText("Description : "+model.getDescription());
         tvCompany.setText("Company : "+model.getCompany());
 
