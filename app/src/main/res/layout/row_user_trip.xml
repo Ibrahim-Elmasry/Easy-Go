@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:orientation="horizontal"
+    android:background="@android:color/darker_gray"
+    android:id="@+id/row_userTrip_card"
+    >
+
+    <ImageView
+        android:id="@+id/row_userTrip_img"
+        android:src="@color/black"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/row_userTrip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Giza"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        />
+</RelativeLayout>

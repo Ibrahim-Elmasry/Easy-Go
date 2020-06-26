@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/menu_flight">
+            <menu>
+                <item
+                    android:id="@+id/nav_flight_reservation"
+                    android:title="@string/menu_reservation" />
+                <!--<item
+                    android:id="@+id/nav_flight_cancelReservation"
+                    android:title="@string/menu_cancelRes" />-->
+            </menu>
+
+        </item>
+    </group>
+
+    <item android:title="@string/menu_trip">
+        <menu>
+            <item
+                android:id="@+id/nav_trip_reservation"
+                android:title="@string/menu_reservation" />
+           <!-- <item
+                android:id="@+id/nav_trip_cancelReservation"
+                android:title="@string/menu_cancelRes" />-->
+
+
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_admin"
+        android:id="@+id/nav_adminPanel"
+        >
+        <menu>
+            <item
+                android:id="@+id/nav_flight_adminManage"
+                android:title="@string/menu_mangeFlight" />
+            <item
+                android:id="@+id/nav_trip_adminManage"
+                android:title="@string/menu_mangeTrip" />
+            <item
+                android:id="@+id/nav_trip_adminBasicData"
+                android:title="@string/menu_mangeData" />
+        </menu>
+    </item>
+
+    <item android:title="@string/menu_user">
+        <menu>
+            <item
+                android:id="@+id/nav_userProfile"
+                android:title="@string/menu_profile" />
+            <item
+                android:id="@+id/nav_logout"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+
+</menu>
