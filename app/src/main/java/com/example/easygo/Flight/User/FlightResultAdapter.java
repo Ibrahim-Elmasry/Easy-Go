@@ -25,7 +25,6 @@ public class FlightResultAdapter extends RecyclerView.Adapter<FlightResultAdapte
 
     private Context context;
     private List<UserFlightChoiceSorting> mList;
-    private List<BookedFlights> mList2;
     private FlightResultAdapter.AdapterListener onClickListener;
 
 

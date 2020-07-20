@@ -378,7 +378,6 @@ public class FlightActivity extends BaseActivity {
 
     private void validation() {
 
-
         if (cmSource == null
                 || cmDestination == null
                 || stTimeDepart == null || stTimeDepart.isEmpty()
